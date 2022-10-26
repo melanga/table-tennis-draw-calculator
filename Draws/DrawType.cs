@@ -1,6 +1,6 @@
 namespace TableTennisDrawCalculator.Draws;
 
-public enum DrawTypes
+public enum DrawType
 {
     TeamSelection = 1,
     CompetitiveMatch = 2,

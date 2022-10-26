@@ -7,7 +7,7 @@ public class TeamDraw : IDraw
 
     public void Input()
     {
-        Console.WriteLine("Input total members: ");
+        Console.WriteLine("Input total no of members: ");
         var totalMembers = Console.ReadLine();
         try
         {

@@ -1,3 +1,5 @@
+using TableTennisDrawCalculator.Draws;
+
 namespace TableTennisDrawCalculator;
 
 public class AppView
@@ -7,24 +9,26 @@ public class AppView
     {
     }
 
-    private static AppView _instance;
+    private static AppView _instance = new AppView();
 
     public static AppView GetInstance()
     {
-        if (_instance == null)
-        {
-            _instance = new AppView();
-        }
         return _instance;
     }
 
     public void GreetUser()
     {
-        Console.WriteLine("Table Tennis Draw Calculator");
+        Console.WriteLine("<------ Table Tennis Draw Calculator ------>");
+        Console.WriteLine("Calculate Draws of Table Tennis Matches");
     }
 
     public void GetDrawTypeView()
     {
-        Console.WriteLine("what is draw type?");
+        Console.WriteLine("\nWhat is the Draw Type you want?");
+        Console.WriteLine("Please input the corresponding number...");
+        foreach (int i in Enum.GetValues(typeof(DrawType)))
+        {
+            Console.WriteLine( "" + i + ": "+ (DrawType)i);
+        }
     }
 }

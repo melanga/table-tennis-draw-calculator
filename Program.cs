@@ -11,7 +11,7 @@ public class Program
         appView.GetDrawTypeView();
         
         var drawType = Console.ReadLine();
-        Console.WriteLine($"Selected option: {drawType}");
+        Console.WriteLine($"Selected option: {(DrawType)Convert.ToInt16(drawType)}");
         if (drawType == null) return;
         var draw = new DrawTypeFactory(drawType).GetDraw();
         if (draw == null)

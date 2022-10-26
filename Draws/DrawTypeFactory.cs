@@ -13,7 +13,7 @@ public class DrawTypeFactory
     {
         switch (_type)
         {
-            case "team-selection":
+            case "1":
                 return new TeamDraw();
             default:
                 return null;
